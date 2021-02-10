@@ -129,6 +129,46 @@ export function mapBoolArrayArray(
   );
 }
 
+export function getInt8ArrayLength(array: i8[]): i32 {
+  return array.length;
+}
+
+export function getUint8ArrayLength(array: u8[]): i32 {
+  return array.length;
+}
+
+export function getInt16ArrayLength(array: i16[]): i32 {
+  return array.length;
+}
+
+export function getUint16ArrayLength(array: u16[]): i32 {
+  return array.length;
+}
+
+export function getInt32ArrayLength(array: i32[]): i32 {
+  return array.length;
+}
+
+export function getUint32ArrayLength(array: u32[]): i32 {
+  return array.length;
+}
+
+export function getInt64ArrayLength(array: i64[]): i32 {
+  return array.length;
+}
+
+export function getUint64ArrayLength(array: u64[]): i32 {
+  return array.length;
+}
+
+export function getFloat32ArrayLength(array: f32[]): i32 {
+  return array.length;
+}
+
+export function getFloat64ArrayLength(array: f64[]): i32 {
+  return array.length;
+}
+
 declare function testImportString(value: string): void;
 export function callTestImportString(value: string): void {
   testImportString(value);

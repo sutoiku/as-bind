@@ -351,6 +351,28 @@ describe("asbind", () => {
       // Ensure it has the correct values
       assert.equal(arrayMapResponse[1][0], true);
     });
+
+    // TypedArray length with AS Syntax
+    [
+      "Int8Array",
+      "Uint8Array",
+      "Int16Array",
+      "Uint16Array",
+      "Int32Array",
+      "Uint32Array",
+      "Float32Array",
+      "Float64Array"
+    ].forEach(typedArrayKey => {
+      it(`should return the length of an AS array ${typedArrayKey}`, () => {
+        const getLength =
+          asbindInstance.exports["get" + typedArrayKey + "Length"];
+        const len = getLength(new global[typedArrayKey](3));
+
+        // Ensure it has the correct values
+        assert.equal(len, 3);
+      });
+    });
+
   });
 
   describe("importObject functions", () => {
